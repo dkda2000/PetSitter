@@ -4,71 +4,111 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 145vh;
+}
 a {
   text-decoration: none;
 }
-.contenedor {
-  max-width: 1200px;
-  width: 95%;
-  width: min(95%, 1200px);
-  margin: 0 auto;
+li {
+  list-style: none;
 }
 
 /* Header */
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../img/foto-portada.jpeg);
-  height: 600px;
+  height: 800px;
   background-size: cover;
-  background-position: center 10%;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 .barra {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+}
+.barra.active {
+  background-color: rgba(0, 0, 0, 0.61);
+  transition: all 1s ease;
 }
 .logo {
   display: flex;
   align-items: center;
 }
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   margin-right: 5px;
 }
 .logo h1 {
   color: #bc5c2c;
+  font-size: 50px;
+  font-weight: bold;
 }
-.navbar {
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#menu {
+  display: none;
+}
+.menu-icono {
+  width: 40px;
+}
+
+.navbar label {
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 968px) {
+  .navbar label {
+    display: initial;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    display: none;
+  }
+  .menu-icono {
+    margin-right: 20px;
+  }
+  .item {
+    margin: 20px 0 20px 0;
+    width: 100%;
+  }
+  #menu:checked ~ .menu {
+    display: inline;
+  }
 }
 .navbar a {
   color: #fff;
   padding: 10px;
   text-transform: uppercase;
-  border-radius: 5px;
-}
-.navbar a:nth-last-child(3n) {
-  text-align: center;
+  border-radius: 30px;
 }
 .navbar a:hover {
   background-color: #bc5c2c;
   color: #ffffff;
+  font-size: 18px;
   transition: background-color 0.8s;
 }
+
 .header-text {
   text-align: center;
-  margin-top: 200px;
-}
-.header-text h2 {
+  padding-top: 400px;
   font-size: 50px;
   color: #ffffff;
 }
-.header-text h2 span {
+.header-text span {
   text-transform: uppercase;
 }
 

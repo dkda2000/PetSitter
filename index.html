@@ -9,28 +9,32 @@
 
   <body>
     <header class="header">
-      <div class="contenedor">
-        <div class="barra">
-          <div class="logo">
-            <a href="./index.html"
-              ><img src="./img/Logo-huella.png" alt="Petsitter"
-            /></a>
-            <a href="./index.html"><h1>Petsitter</h1></a>
-          </div>
-
-          <nav class="navbar">
-            <a href="#seccion1">Nosotros</a>
-            <a href="tienda.html" target="_blank">Tienda</a>
-            <a href="#seccion2">¿Por qué elegirnos?</a>
-            <a href="#seccion3">FAQ</a>
-            <a href="#seccion3">Contacto</a>
-          </nav>
+      <div class="barra">
+        <div class="logo">
+          <a href="./index.html"
+            ><img src="./img/Logo-huella.png" alt="Petsitter"
+          /></a>
+          <a href="./index.html"><h1>Petsitter</h1></a>
         </div>
+
+        <nav class="navbar">
+          <input type="checkbox" id="menu" />
+          <label for="menu">
+            <img class="menu-icono" src="./img/menu.png" alt="imagen de menu" />
+          </label>
+          <ul class="menu">
+            <li class="item"><a href="#seccion1">Nosotros</a></li>
+            <li class="item">
+              <a href="tienda.html" target="_blank">Tienda</a>
+            </li>
+            <li class="item"><a href="#seccion2">¿Por qué elegirnos?</a></li>
+            <li class="item"><a href="#seccion3">FAQ</a></li>
+            <li class="item"><a href="#seccion3">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="header-text">
-        <h2>Bienvenido a <span>petsitter</span></h2>
-      </div>
+      <h2 class="header-text">Bienvenido a <span>petsitter</span></h2>
     </header>
     <!-- Fin Header -->
 
@@ -136,5 +140,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>
