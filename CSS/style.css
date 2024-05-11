@@ -7,7 +7,7 @@
 body {
   height: 145vh;
 }
-a {
+.enlace {
   text-decoration: none;
 }
 li {
@@ -61,12 +61,12 @@ li {
   width: 40px;
 }
 
-.navbar label {
+.navegacion label {
   cursor: pointer;
   display: none;
 }
 @media (max-width: 968px) {
-  .navbar label {
+  .navegacion label {
     display: initial;
   }
   .menu {
@@ -81,21 +81,21 @@ li {
   .menu-icono {
     margin-right: 20px;
   }
-  .item {
-    margin: 20px 0 20px 0;
+  .opcion {
+    margin: 20px 0;
     width: 100%;
   }
   #menu:checked ~ .menu {
     display: inline;
   }
 }
-.navbar a {
+.navegacion a {
   color: #fff;
   padding: 10px;
   text-transform: uppercase;
   border-radius: 30px;
 }
-.navbar a:hover {
+.navegacion a:hover {
   background-color: #bc5c2c;
   color: #ffffff;
   font-size: 18px;
@@ -114,7 +114,7 @@ li {
 
 /* Main */
 .contenedor {
-  width: 90%;
+  width: 100%;
   margin: auto;
 }
 
