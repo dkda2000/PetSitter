@@ -154,7 +154,9 @@ section {
 /* Footer */
 .footer {
   background-color: #333;
-  color: #fff;
+  color: #bc5c2c;
   text-align: center;
   width: 100%;
+  padding: 40px 0 10px 0;
+  font-weight: bold;
 }
