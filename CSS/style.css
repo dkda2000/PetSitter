@@ -35,6 +35,7 @@ li {
 .barra {
   position: fixed;
   top: 0;
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -69,34 +70,9 @@ li {
 .menu-icono {
   width: 40px;
 }
-
 .navegacion label {
   cursor: pointer;
   display: none;
-}
-@media (max-width: 968px) {
-  .navegacion label {
-    display: initial;
-  }
-  .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.61);
-    display: none;
-  }
-  .menu-icono {
-    margin-right: 20px;
-  }
-  .opcion {
-    margin: 20px 0;
-    width: 100%;
-  }
-  #menu:checked ~ .menu {
-    display: inline;
-  }
 }
 .navegacion a {
   color: var(--color-font);
@@ -162,21 +138,23 @@ section {
 
 /* Botón Arriba */
 .go-up {
-  display: none;
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -100px;
+  z-index: 1;
   border-radius: 50%;
+  border: solid 1px;
   background-color: var(--bg-flecha);
   margin: 0 20px 20px 0;
   text-align: end;
 }
 .go-up.active {
-  display: initial;
+  right: 0;
+  transition: all 1s ease;
 }
 .img-flecha {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 .img-flecha:hover {
   width: 50px;
@@ -191,4 +169,64 @@ section {
   width: 100%;
   padding: 40px 0 10px 0;
   font-weight: bold;
+}
+
+/* Media Query */
+@media (max-width: 480px) {
+  /* Header */
+  .header {
+    height: 500px;
+  }
+  .header-text {
+    padding-top: 240px;
+    font-size: 35px;
+  }
+  /* Logo */
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo h1 {
+    font-size: 40px;
+  }
+  .menu-icono {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Botón Arriba */
+  .img-flecha {
+    width: 35px;
+    height: 35px;
+  }
+  .img-flecha:hover {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  /* Header */
+  .navegacion label {
+    display: initial;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    display: none;
+  }
+  .menu-icono {
+    margin-right: 20px;
+  }
+  .opcion {
+    margin: 20px 0;
+    width: 100%;
+  }
+  #menu:checked ~ .menu {
+    display: inline;
+  }
 }
