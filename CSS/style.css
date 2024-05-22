@@ -203,8 +203,20 @@ section {
   background-size: cover;
   padding-top: 35%;
   margin: 3% 3%;
+  border-radius: 20px;
+  box-shadow: 5px 8px 12px black;
 }
 #ButtonModal {
+.paseador-fondo h2{ 
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: aliceblue;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  padding-top: 2rem;
+}
+}
+#ButtonModal{
   margin: 4%;
 }
 
