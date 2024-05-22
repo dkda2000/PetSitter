@@ -251,6 +251,12 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 968px) {
   /* Header */
   .navegacion label {
