@@ -29,6 +29,7 @@ function capturarDatosPasadosEnLaURL(){
       let celdaCampo = document.createElement("td");
 		  let celdaValor = document.createElement("td");
 
+     campo = traducirCampo(campo);
       //celdaCampo.style.cssText = 'color:red;background-color:yellow';
       
       // row.classList.add("filaspedidos")
@@ -47,4 +48,24 @@ function capturarDatosPasadosEnLaURL(){
       laTabla.appendChild(row);
     }
 
+  }
+
+  function traducirCampo (campo) {
+    if(campo === "nombreCompleto") {
+      campo = "Nombre Completo";
+    }
+
+    if(campo === "email") {
+      campo = "Correo Electrónico";
+    }
+
+    if(campo === "phone") {
+      campo = "Número Telefónico";
+    }
+    
+    if(campo === "message") {
+      campo = "Mensaje";
+    }
+
+    return campo;
   }
