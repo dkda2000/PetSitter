@@ -30,20 +30,14 @@ function capturarDatosPasadosEnLaURL(){
 		  let celdaValor = document.createElement("td");
 
      campo = traducirCampo(campo);
-      //celdaCampo.style.cssText = 'color:red;background-color:yellow';
       
-      // row.classList.add("filaspedidos")
-      // celdaCampo.classList.add("celdaspedidos")
-      // celdaCampo.classList.add("columnarightpedidos")
-      // celdaValor.classList.add("columnaleftpedidos")
-      // celdaValor.classList.add("celdaspedidos")
+     celdaCampo.style.cssText = 'font-size:0.8rem;border: 1px solid #ccc';
+     celdaValor.style.cssText = 'font-size:0.8rem;border: 1px solid #ccc';
+     celdaCampo.innerText = campo;
+     celdaValor.innerText = valorCampo;
 
-
-      celdaCampo.innerText = campo;
-      celdaValor.innerText = valorCampo;
-
-      row.appendChild(celdaCampo);
-		  row.appendChild(celdaValor);		
+     row.appendChild(celdaCampo);
+		 row.appendChild(celdaValor);		
 
       laTabla.appendChild(row);
     }
