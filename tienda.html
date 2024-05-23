@@ -1,183 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Petsitter</title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Petsitter</title>
+      
+        <link rel="icon" href="./icons/Logo-huella.ico"/>
+      
+        <link rel="preload" href="./CSS/normalize.css" />
+        <link rel="stylesheet" href="./CSS/normalize.css" />
+      
+        <link rel="preload" href="./CSS/tienda.css" />
+        <link rel="stylesheet" href="./CSS/tienda.css" />
+      
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous"
+        />
+      </head>
+<body>
 
-    <link rel="icon" href="./icons/Logo-huella.ico" />
-
-    <link rel="preload" href="./CSS/normalize.css" />
-    <link rel="stylesheet" href="./CSS/normalize.css" />
-
-    <link rel="preload" href="./CSS/style.css" />
-    <link rel="stylesheet" href="./CSS/style.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header style="height: 100px; align-items: flex-start">
-      <div style="display: flex; align-items: flex-end">
-        <img class="logo" src="./img/v987-11a.jpg" alt="Petsitter" />
-        <h1 style="font-size: 32px; font-weight: bolder">Petsitter</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">LOG IN</a></li>
-          <li><a href="#1">CARRITO</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <div class="content">
-      <div class="container mt-5">
-        <div class="row">
-          <!-- Primera fila -->
-          <div class="col-lg-6">
-            <div class="row">
-              <!-- Tarjeta 1 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 1</h5>
-                    <p class="card-text">Descripción de la tarjeta 1.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 2 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 2</h5>
-                    <p class="card-text">Descripción de la tarjeta 2.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 3 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 3</h5>
-                    <p class="card-text">Descripción de la tarjeta 3.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 4 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 4</h5>
-                    <p class="card-text">Descripción de la tarjeta 4.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <header class="header" id="principio">
+        <div class="barra">
+          <div class="logo">
+            <a class="enlace" href="./index.html"
+              ><img src="./img/Logo-huella.png" alt="Petsitter"
+            /></a>
+            <a class="enlace" href="./index.html"><h1>Petsitter</h1></a>
           </div>
-          <!-- Segunda fila -->
-          <div class="col-lg-6">
-            <div class="row">
-              <!-- Tarjeta 5 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 5</h5>
-                    <p class="card-text">Descripción de la tarjeta 5.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 6 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 6</h5>
-                    <p class="card-text">Descripción de la tarjeta 6.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 7 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 7</h5>
-                    <p class="card-text">Descripción de la tarjeta 7.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-              <!-- Tarjeta 8 -->
-              <div class="col-md-6 mb-4">
-                <div class="card">
-                  <img
-                    src="./img/purinagatoejemplo.png"
-                    class="card-img-top"
-                    alt="purinagatoejemplo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Título de la tarjeta 8</h5>
-                    <p class="card-text">Descripción de la tarjeta 8.</p>
-                    <a href="#" class="btn btn-primary">Botón</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  
+          <nav class="navegacion">
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+              <img class="menu-icono" src="./img/menu.png" alt="imagen de menu" />
+            </label>
+  
+            <ul class="menu" style="margin-right: 50px;">
+              <li class="opcion">
+                <a class="enlace" href="error404.html" target="_blank">Registrarse</a>
+              </li>
+              <li class="opcion">
+                <a class="enlace" href="error404.html" target="_blank">Ingresar</a>
+              </li>
+              
+            </ul>
+          </nav>
         </div>
-      </div>
-    </div>
+  
+        
+      </header>   
+    
+      <section class="tiendita">
+            <div class="container anuncios">
+                <div class="row ">
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <img src="./img/enviosPerro.png" class="img-fluid" alt="Imagen 1">
+                </div>
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <img src="./img/blackfriday.png" class="img-fluid" alt="Imagen 1">
+                </div>
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <img src="./img/sorpresagato.png" class="img-fluid" alt="Imagen 2">
+                </div>
+                </div>
+            </div>
+
+            <hr class="mb-5">
+
+            <div class="container mb-5">
+                <div class="row ">
+
+                    <!-- Item 1 -->
+                    <div class="col-md-4 col-sm-12 mb-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="28" height="28" class="iconaranja" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <title>iconos</title>
+                            <path d="M48 0C21.5 0 0 21.5 0 48V368c0 26.5 21.5 48 48 48H64c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H48zM416 160h50.7L544 237.3V256H416V160zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+                        </svg>
+                    <div>
+                        <div>Delivery Gratis</div>
+                        <div>en compras a partir de $25000</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 2 -->
+                    <div class="col-md-4 col-sm-12 mb-3">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="iconaranja" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <title>iconos</title>
+                            <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                        </svg>
+                        <title>iconos</title>
+                        <path d="M25.92,6.26a2.63,2.63,0,0,0-2-.94H20a6.66,6.66,0,0,0-13,0H3.09a2.66,2.66,0,0,0-2,.94,2.69,2.69,0,0,0-.6,2.16l2.22,13.3A2.66,2.66,0,0,0,5.31,24H21.68a2.65,2.65,0,0,0,2.62-2.23l2.22-13.3A2.65,2.65,0,0,0,25.92,6.26ZM13.49,2.66a4,4,0,0,1,3.75,2.66H9.75A4,4,0,0,1,13.49,2.66Zm8.19,18.63H5.31L3.09,8h20.8Z" fill="#eb816c"></path>
+                      </svg>
+                      <div>
+                        <div>Envíos en el día,</div>
+                        <div>comprando hasta el mediodía</div>
+                      </div>
+                    </div>
+                    </div>
+                   
+                  <!-- Item 3 -->
+                  <div class="col-md-4 col-sm-12">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" class="iconaranja" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <title>iconos</title>
+                            <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM164.1 325.5C182 346.2 212.6 368 256 368s74-21.8 91.9-42.5c5.8-6.7 15.9-7.4 22.6-1.6s7.4 15.9 1.6 22.6C349.8 372.1 311.1 400 256 400s-93.8-27.9-116.1-53.5c-5.8-6.7-5.1-16.8 1.6-22.6s16.8-5.1 22.6 1.6zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                        </svg>
+                    <div>
+                        <div>Si no quedas satisfecho,</div>
+                        <div>te devolvemos tu dinero</div>
+                    </div>
+                   </div>
+                </div>
+                </div>
+               </div>  
+            <hr> 
+
+            <div>
+
+                <h2 class="mt-5 mb-5">NUESTROS PRODUCTOS</h2>
+                <div class="container">
+                    
+                        <div class="row" id="Card" >
+                        </div>
+                </div>
+            </div>
+        </section>
 
     <footer class="footer">
-      <p style="padding: 10px 0 5px 0">
-        Derechos de autor © 2024. Todos los derechos reservados.
-      </p>
+        <p>Derechos de autor © 2024. Todos los derechos reservados.</p>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    ></script>
-  </body>
+    <script src="./script/script.js"></script>
+    <script  src='./script/tienda.js' type="module"></script>
+
+</body>
 </html>

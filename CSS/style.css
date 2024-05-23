@@ -136,6 +136,27 @@ section {
   display: block;
 }
 
+/* Rosa: Pisando CSS en Contacto */
+.textblack {
+  color: black !important;
+}
+
+.iconaranja {
+  color: #B85B2D !important;
+}
+
+.botonlightnaranja {
+  color: white !important;
+  background-color:#ccc !important;  
+  border-color:   #ccc !important;
+    
+}
+.botonlightnaranja:hover {
+  color:  white !important;
+  background-color:  #B85B2D !important;
+  border-color:  #B85B2D !important;
+}
+
 /* Botón Arriba */
 .go-up {
   position: fixed;
