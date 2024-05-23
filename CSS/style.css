@@ -201,21 +201,23 @@ section {
   background-image: url(../img/paseador3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 35%;
-  margin: 3% 3%;
+  margin: auto;
   border-radius: 20px;
   box-shadow: 5px 8px 12px black;
+  width: 80%;
+  height: 30em;
+  margin-top: 2em;
 }
-#ButtonModal {
+
 .paseador-fondo h2{ 
   font-family: "Yeseva One", serif;
   font-weight: 400;
   font-style: normal;
   color: aliceblue;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
-  padding-top: 2rem;
+  padding-top: 19rem;
 }
-}
+
 #ButtonModal{
   margin: 4%;
 }
@@ -235,7 +237,7 @@ section {
   background-color: #d0cacaef;
   margin: auto;
   padding: 25px;
-  width: 50%;
+  width: 48%;
 }
 .modalContainer .close {
   color: #100c0b;
