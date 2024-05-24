@@ -22,6 +22,10 @@ body {
 li {
   list-style: none;
 }
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 /* Header */
 .header {
@@ -58,6 +62,9 @@ li {
   color: var(--color-logos);
   font-size: 50px;
   font-weight: bold;
+}
+.navegacion {
+  padding-right: 20px;
 }
 .menu {
   display: flex;
@@ -142,19 +149,18 @@ section {
 }
 
 .iconaranja {
-  color: #B85B2D !important;
+  color: #b85b2d !important;
 }
 
 .botonlightnaranja {
   color: white !important;
-  background-color:#ccc !important;  
-  border-color:   #ccc !important;
-    
+  background-color: #ccc !important;
+  border-color: #ccc !important;
 }
 .botonlightnaranja:hover {
-  color:  white !important;
-  background-color:  #B85B2D !important;
-  border-color:  #B85B2D !important;
+  color: white !important;
+  background-color: #b85b2d !important;
+  border-color: #b85b2d !important;
 }
 
 /* Botón Arriba */
@@ -201,15 +207,16 @@ section {
   background-image: url(../img/paseador3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   margin: auto;
   border-radius: 20px;
   box-shadow: 5px 8px 12px black;
-  width: 80%;
+  width: 95%;
   height: 30em;
   margin-top: 2em;
 }
 
-.paseador-fondo h2{ 
+.paseador-fondo h2 {
   font-family: "Yeseva One", serif;
   font-weight: 400;
   font-style: normal;
@@ -218,7 +225,7 @@ section {
   padding-top: 19rem;
 }
 
-#ButtonModal{
+#ButtonModal {
   margin: 4%;
 }
 
@@ -253,7 +260,21 @@ section {
 }
 
 /* Media Query */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  /* Header */
+  #menu:checked ~ .menu {
+    flex-direction: column;
+  }
+  .opcion {
+    margin: 10px 0;
+  }
+  .header-text {
+    padding-top: 250px !important;
+    font-size: 30px !important;
+  }
+}
+
+@media (max-width: 700px) {
   /* Header */
   .header {
     height: 500px;
@@ -275,6 +296,11 @@ section {
     height: 35px;
   }
 
+  /* Sección 1 */
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
   /* Botón Arriba */
   .img-flecha {
     width: 35px;
@@ -283,12 +309,6 @@ section {
   .img-flecha:hover {
     width: 40px;
     height: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .tarjetas {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -310,10 +330,10 @@ section {
     margin-right: 20px;
   }
   .opcion {
-    margin: 20px 0;
-    width: 100%;
+    margin: 15px 0;
   }
   #menu:checked ~ .menu {
-    display: inline;
+    display: flex;
+    justify-content: space-around;
   }
 }
