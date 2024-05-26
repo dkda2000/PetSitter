@@ -72,25 +72,44 @@
         <h4 class="sobre">SOBRE NOSOTROS</h4>
 
         <h2>Somos PETSITTER, personas cuidando tu mascota</h2>
-        <p>
-          Conectamos personas que necesitan un cuidador para su peludito con
-          cuidadores confiables de cercanía.
+        <p style="margin: 30px 10px 0px 10px;">
+          En Petsitter entendemos que la vida puede ser agitada para los dueños de mascotas. Ya sea por compromisos laborales, vacaciones o simplemente la necesidad de un descanso, estamos aquí para conectarte con amantes de las mascotas que cuidarán a tus compañeros como si fueran parte de su familia, con masajes en la barriga y abrazos incluidos.
         </p>
 
         <div class="tarjetas">
-          <div class="tarjeta">
-            Card 1
-            <img src="./img/patafelizejemplo.png" alt="PatasFelices" />
+         
+          <div class="tarjeta rotate3d-container" id="rotate1">
+            <div style="height: 180px">
+              <img src="./img/libresdejaulas.jpg" alt="PatasFelices" />
+            </div>
+            <div style="height: auto">
+              <h5>Libre de jaulas</h5>
+              <p>Tu mascota permanece en una casa, libre para deambular y explorar como si estuviera en su propio hogar.</p>
+            </div>
+                        
           </div>
-          <div class="tarjeta">
-            Card 2
-            <img src="./img/patafelizejemplo.png" alt="PatasFelices" />
+
+          <div class="tarjeta rotate3d-container" id="rotate2">
+            <div>
+              <img src="./img/reallovers.jpg" alt="PatasFelices" />
+            </div>
+            <div>
+              <h5>Amantes de los animales</h5>
+              <p>Nuestros cuidadores son personas que además de abrirte las puertas de sus hogares, aman a las mascotas tanto como tú.</p>
+            </div>
           </div>
-          <div class="tarjeta">
-            Card 3
-            <img src="./img/patafelizejemplo.png" alt="PatasFelices" />
+
+          <div class="tarjeta rotate3d-container" id="rotate3">
+            <div>
+             <img src="./img/24hrs.jpg" alt="PatasFelices" />
+            </div>
+            <div>
+              <h5>Atención las 24 hrs</h5>
+              <p>Nuestros cuidadores limitan las mascotas a su cargo para darle a la tuya la mejor atención mientras no estás.</p>
+            </div>
           </div>
         </div>
+
       </section>
       <!--Modal-->
       <section id="seccion2">
@@ -664,8 +683,9 @@
     ></script>
     <script src="./script/script.js"></script>
     <script src="./script/validation.js"></script>
+    <script src="./script/dinamismo.js"></script>
 
-    <!-- <No BORRAR!!, se activa cuando se mande al netlify>
+    <!-- <No BORRAR!!, se activa cuando se mande al netlify> -->
       <script>
       // Función para reiniciar la posición de desplazamiento al cargar la página
       window.onload = function() {
@@ -676,6 +696,7 @@
           }, 1);
         }
       };
-    </script> -->
+    </script>
+    
   </body>
 </html>

@@ -142,9 +142,9 @@
   /* Media Query */
   @media (max-width: 480px) {
     /* Header */
-    .header {
+    /* .header {
       height: 500px;
-    }
+    } */
     .header-text {
       padding-top: 100px;
       font-size: 35px;
