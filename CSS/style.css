@@ -124,12 +124,13 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding-top: 50px;
+  margin: 0 20px 0 20px;
 }
 
 .tarjeta {
   border: 1px solid var(--border-color);
-  background-color: var(--color-logos);
-  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -138,10 +139,31 @@ section {
 }
 
 .tarjeta img {
-  max-width: 100%;
+  max-width: 150px;
   height: auto;
   display: block;
+  border-radius: 70px;
+  padding-top: 35px;
 }
+
+.tarjeta h5 {
+  margin-top: 20px;
+}
+
+.tarjeta p{
+  padding: 0 20px 10px;
+}
+
+.rotate3d-container {
+  perspective: 1000px;
+}
+
+.rotate3d-container img {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+
 
 /* Rosa: Pisando CSS en Contacto */
 .textblack {
