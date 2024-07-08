@@ -52,3 +52,16 @@ if (document.getElementById("ButtonModal")) {
     body.style.overflow = "visible";
   };
 }
+
+/** Login **/
+const container = document.getElementById("container");
+const registroBtn = document.getElementById("registrarse");
+const loginBtn = document.getElementById("login");
+
+registroBtn.addEventListener("click", () => {
+  container.classList.add("active");
+});
+
+loginBtn.addEventListener("click", () => {
+  container.classList.remove("active");
+});
