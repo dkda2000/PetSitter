@@ -5,6 +5,8 @@ const config = require('../config/config');
 
 const db = require('../db/db');
 
+
+
  const getAllUsuarios = (req, res) => {
     const sql = 'SELECT * FROM usuarios';
      db.query(sql, (err, results) => {
@@ -59,6 +61,9 @@ const login = (req, res) => {
             res.json({message: 'Usuario actualizado'});
         });
 };
+
+
+
 
 const createUsuario = (req, res) => {
     const { nombre, email, direccion, telefono, pass, rol_id } = req.body;
