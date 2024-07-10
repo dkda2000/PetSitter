@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const petsitterRouter = require ('../routes/petsitterRouter');
 const utilidades = require ('../helpers/utilidades');
+const setupSwagger = require('../config/swagger');
 
 console.log(`INICIANDO`);
 
@@ -30,7 +31,7 @@ app.use('/api', petsitterRouter);
 
   });
 
-
+setupSwagger(app);
 
 const PORT = process.env.PORT || 3000;
 // const PORT = 3000;
