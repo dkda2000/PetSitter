@@ -68,7 +68,6 @@ const getAllCategorias = (req, res) => {
     updateProducto,
     createProducto,
     deleteProducto,
-    guardarArchivo,
     getAllCategorias
     
 }

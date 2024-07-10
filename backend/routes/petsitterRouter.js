@@ -10,7 +10,7 @@ router.get('/productos/:id', productosController.getProductoById);
 router.put('/productos/:id', authMiddleware, productosController.updateProducto);
 router.post('/productos/', authMiddleware, productosController.createProducto);
 router.delete('/productos/:id', authMiddleware, productosController.deleteProducto);
-router.post('/guardar', authMiddleware, productosController.guardarArchivo); 
+// router.post('/guardar', authMiddleware, productosController.guardarArchivo); 
 
 router.get('/usuarios', authMiddleware, usuariosController.getAllUsuarios);
 router.get('/usuarios/:id', authMiddleware, usuariosController.getUsuarioById);
