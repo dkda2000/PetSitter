@@ -13,6 +13,10 @@
       "dest": "/backend/src/server.js"
     },
     {
+      "src": "/swagger/(.*)", 
+      "dest": "/backend/src/server.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "backend/src/server.js"
     }
