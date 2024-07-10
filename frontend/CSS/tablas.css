@@ -141,8 +141,12 @@
     color: var(--color-font);
     text-align: center;
     width: 100%;
-    padding: 40px 0 10px 0;
+    padding: 10px 0 10px 0;
     font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
   }
   
   
