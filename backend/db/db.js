@@ -2,12 +2,12 @@ const mysql = require('mysql2');
 
 console.info('Iniciando db.js');
 
-// Crear la conexión a la base de datos
+// Crea la conexión a la base de datos
 const connection = mysql.createConnection({
-    host: 'mysql-proyectosestudiantes.alwaysdata.net', // Cambia a tu host de MySQL
-    user: '366458', // Cambia al usuario de tu base de datos
-    password: 'Root123@', // Cambia a la contraseña de tu base de datos
-    database: 'proyectosestudiantes_bd', // Cambia al nombre de tu base de datos,
+    host: 'mysql-proyectosestudiantes.alwaysdata.net', // host de MySQL
+    user: '366458', // usuario de la base de datos
+    password: 'Root123@', // contraseña de la base de datos
+    database: 'proyectosestudiantes_bd', // nombre de la base de datos,
     connectTimeout:1000000,
     port:3306
 
@@ -15,7 +15,7 @@ const connection = mysql.createConnection({
 
 console.info('Iniciando conex a la base de datos MySQL');
 
-// Conectar a la base de datos
+// Conecta a la base de datos
 connection.connect((err) => {   
 
     if (err) {

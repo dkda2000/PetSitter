@@ -34,17 +34,17 @@ const getUsuarioByRol = (req, res) => {
 
 const login = (req, res) => {
     const { email, pass } = req.body;
-    const sql = 'SELECT * FROM usuarios WHERE email = ? AND pass = ?';
+    const sql = 'SELECT * FROM usuarios WHERE email = ? AND pass = ? AND rol_id = 2';
     db.query(sql, [email, pass], (err, result) => {
         console.log(result);
         if (result.length!=0) {
             const token = jwt.sign({ id: result.id}, config.secretKey, {expiresIn: config.tokenExpiresIn})
-            res.status(200).send({ auth:true, token});
+            res.status(200).send({nombre_usuario: result[0].nombre, auth:true, token:token });
+   
         }
 
         else {res.status(404).send("No se encontró el usuario")}
-        
-                    // res.json(result);
+             
         });
 
     
@@ -52,9 +52,9 @@ const login = (req, res) => {
 
  const updateUsuario = (req, res) => {
     const { id } = req.params;
-    const { nombre, email, direccion, telefono, pass, rol_id } = req.body;
-    const sql = 'UPDATE usuarios SET nombre = ?, email = ?, direccion = ?, telefono = ?, pass = ?, rol_id = ? WHERE id = ?';
-    db.query(sql, [nombre, email, direccion, telefono, pass, rol_id], (err, result) => {
+    const { nombre, email, direccion, telefono, rol_id } = req.body;
+    const sql = 'UPDATE usuarios SET nombre = ?, email = ?, direccion = ?, telefono = ?, rol_id = ? WHERE id = ?';
+    db.query(sql, [nombre, email, direccion, telefono, rol_id, id], (err, result) => {
         if (err) throw err;
             res.json({message: 'Usuario actualizado'});
         });
@@ -78,6 +78,14 @@ const deleteUsuario = (req, res) => {
         });
 };
 
+const getAllRoles = (req, res) => {
+    const sql = 'SELECT * FROM roles';
+     db.query(sql, (err, results) => {
+         if (err) throw err;
+            res.json(results);
+        });
+ };
+
  module.exports = {
     getAllUsuarios,
     getUsuarioById,
@@ -85,6 +93,7 @@ const deleteUsuario = (req, res) => {
     updateUsuario,
     createUsuario,
     deleteUsuario,
+    getAllRoles,
     login
 }
 

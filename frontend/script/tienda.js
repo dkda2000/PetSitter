@@ -4,12 +4,9 @@ var EVENTS_API = "/api/productos";
 async function getProductos() {
 
     const response = await fetch(`${EVENTS_API}`);
-
-    // console.log(response)
     
     const json = await response.json();
 
-    // console.log(json)
 
     return json
   }
@@ -29,7 +26,7 @@ async function getProductos() {
             foto = "https://i48pjyg3ch4gheoj.public.blob.vercel-storage.com/img_storage/"+Item.nombre_img
         }
         
-        // let foto = (Item.thumbnail).replace ("-I","-E");
+        
         let limiteCaracteres = 45
 
         templateCard += `<div class="col-md-3 col-sm-12 mb-3">

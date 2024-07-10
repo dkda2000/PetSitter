@@ -18,7 +18,7 @@ app.use('/api', petsitterRouter);
     const filePath = req.url.replace('/ui', '');
 
     const absolutePath = path.join(__dirname, `../../frontend${filePath}`);
-    //res.sendFile(path.join(__dirname, `../../frontend${filePath}`)); 
+    
 
 
     if (utilidades.fileExists(absolutePath)) {

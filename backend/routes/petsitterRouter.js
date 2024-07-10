@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const productosController = require('../controllers/productosController');
 const usuariosController = require('../controllers/usuariosController');
+const pedidosController = require('../controllers/pedidosController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/productos', productosController.getAllProductos);
@@ -18,6 +19,11 @@ router.get('/usuarios/roles/:id_rol', authMiddleware, usuariosController.getUsua
 router.post('/usuarios/', usuariosController.createUsuario);
 router.delete('/usuarios/:id', authMiddleware, usuariosController.deleteUsuario);
 router.post('/usuarios/login', usuariosController.login);
+
+router.get('/pedidos', authMiddleware, pedidosController.getAllPedidos);
+
+router.get('/roles', authMiddleware, usuariosController.getAllRoles);
+router.get('/categorias', productosController.getAllCategorias);
 
 
 module.exports = router;

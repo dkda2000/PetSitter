@@ -62,6 +62,7 @@ document.getElementById('btn_registrarse').addEventListener('click', function(ev
         
         if (response.auth) {
           guardarTokenLocalStorage(response.token);
+          guardarNombreLocalStorage(response.nombre_usuario);
           location.href = "tabla_inicio.html"}
       
         
@@ -78,4 +79,10 @@ document.getElementById('btn_registrarse').addEventListener('click', function(ev
 
   function guardarTokenLocalStorage(token) {
     localStorage.setItem('authToken', token);
+  }
+
+  // Guardamos el nombre del Usuario en el LocalStorage
+
+  function guardarNombreLocalStorage(nombre) {
+    localStorage.setItem('authNombre', nombre);
   }

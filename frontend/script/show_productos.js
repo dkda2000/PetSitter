@@ -15,7 +15,7 @@
         }
 
         function llenarTabla(datos) {
-            // Capturar el tbody en una variable
+            
             let laTabla = document.querySelector("#Productos tbody");
 
             laTabla.innerHTML = "";
@@ -25,7 +25,7 @@
             datos.forEach(producto => {
                 let row = document.createElement("tr");
                 
-                // Crea celdas para cada campo que coincida con los encabezados
+                
                 let celdaId = document.createElement("td");
                 celdaId.innerText = producto.id || '';
                 row.appendChild(celdaId);
@@ -61,6 +61,10 @@
         
 
         async function abrirModal (id) {
+
+          let categorias = await getAllCategorias();
+          console.log(categorias);
+          llenarComboCategorias(categorias);
           var myModal = new bootstrap.Modal(document.getElementById('myModal'));
 
             limpiarFormulario();
@@ -92,6 +96,30 @@
           
         }
 
+        async function getAllCategorias() {
+                   
+            let response = await fetch('/api/categorias/', {
+              method: 'GET',
+              headers: {
+                'Content-Type': 'application/json'
+            }}
+             );
+                if (!response.ok) {
+                    throw new Error('Error al obtener datos de la API');
+                }
+            let data = await response.json();
+            return data    
+            
+          }  
+
+          function llenarComboCategorias(listaDeCategorias){
+            $("#producto_categoria").html("");
+            listaDeCategorias.forEach(categoria =>{
+                let option = $("<option></option>").val(categoria.id).text(categoria.descripcion);
+                $("#producto_categoria").append(option);
+              });
+          }
+
         function crearProducto () {
           let token = localStorage.getItem('authToken');
 
@@ -114,7 +142,7 @@
                 "descripcion": descripcion,
                 "precio": precio,
                 "stock": stock,
-                "categoria": 1,
+                "categoria_id": categoria,
               }),
             };
             
@@ -148,7 +176,7 @@
                 "descripcion": descripcion,
                 "precio": precio,
                 "stock": stock,
-                "categoria": 1,
+                "categoria_id": categoria,
               }),
             };
             

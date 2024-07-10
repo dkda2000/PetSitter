@@ -63,16 +63,19 @@
 
         
       <section id="seccion1">
-        <h4>Inicio</h4>
-                
-                <table id="Productos" class="tabladecontacto">
+
+        
+        <h4 class="ms-3 ">Hola <span id="nombre_usuario" class= "fw-bold"> </span>, estos son los últimos pedidos</h4>
+
+                <table id="Pedidos" class="tabladecontacto">
                   <thead >               
                         <tr>
                           <th class="borderellenoth" style="text-align: center;"><p>Id</p></th>                      
-                          <th class="borderellenoth"><p>Marca</p></th> 
-                          <th class="borderellenoth"><p>Descripción</p></th>                      
-                          <th class="borderellenoth" style="text-align: center;"><p>Stock</p></th> 
-                          <th class="borderellenoth" style="text-align: center;"><p>Acciones</p></th> 
+                          <th class="borderellenoth"><p>Fecha</p></th> 
+                          <th class="borderellenoth"><p>Nombre del Cliente</p></th>                      
+                          <th class="borderellenoth"><p>Direccion del Cliente</p></th> 
+                          <th class="borderellenoth" style="text-align: center;"><p>Estado del Pedido</p></th> 
+                          <th class="borderellenoth" style="text-align: center;"><p>Total</p></th>   
                         </tr>
                         <tbody>
 
@@ -82,7 +85,7 @@
                     
                 </table>     
         
-        <p><a class="btn btn-md botonlightnaranja" href="tablas.html">Volver al inicio</a></p>
+        
 
       </section>
 
@@ -246,7 +249,16 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>    
-    <script src="./script/show_productos.js"></script>
+    <script src="./script/show_pedidos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+    <script src="./script/sesionlogueada.js"></script>
+
+    <script>
+      let nombre = localStorage.getItem('authNombre');
+      $("#nombre_usuario").text(nombre);
+    </script>
+
     
   </body>
 </html>
