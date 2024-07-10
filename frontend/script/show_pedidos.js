@@ -58,7 +58,9 @@
                 celdaTotal.innerText = pedido.total || '';
                 row.appendChild(celdaTotal);
                 
+                
                 celdaId.style.cssText = 'text-align: center';
+                celdaFecha.style.cssText = 'text-align: center';
                 celdaEstado.style.cssText = 'text-align: center';
                 celdaTotal.style.cssText = 'text-align: center';
                                 

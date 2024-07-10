@@ -64,6 +64,7 @@
                 row.appendChild(celdaAcciones);
 
                 celdaId.style.cssText = 'text-align: center';
+                celdaTel.style.cssText = 'text-align: center';
                 celdaRol.style.cssText = 'text-align: center';
                 celdaAcciones.style.cssText = 'text-align: center';
                 

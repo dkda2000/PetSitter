@@ -3,35 +3,57 @@
 document.getElementById('btn_registrarse').addEventListener('click', function(event) {
     event.preventDefault();
     
+    let isValid = true;
+
     let nombre = $('#tx_nombre').val();
     let email = $('#tx_email').val();
     let direccion = $('#tx_direccion').val();
     let telefono = $('#tx_telefono').val();
     let password = $('#tx_password').val();
 
-    var settings = {
-        "url": "/api/usuarios",
-        "method": "POST",
-        "timeout": 0,
-        "headers": {
-          "Content-Type": "application/json"
-        },
-        "data": JSON.stringify({
-          "nombre": nombre,
-          "email": email,
-          "direccion": direccion,
-          "telefono": telefono,
-          "pass": password,
-          "rol_id": 1
-        }),
-      };
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-        alert(response.message);
-        location.reload();
-      });
+      // Valida los datos del registro
 
+            if (nombre.length < 3) {
+              isValid = false;
+              alert('El nombre debe tener al menos 3 caracteres.');
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                isValid = false;
+                alert('Por favor, ingresa un correo electrónico válido.');
+            }
+
+            const phonePattern = /^\d{10}$/; 
+            if (!phonePattern.test(telefono)) {
+                isValid = false;
+                alert('Por favor, ingresa un número de teléfono válido de 10 dígitos.');
+            }
+
+            if (isValid) {
+              var settings = {
+                "url": "/api/usuarios",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                  "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                  "nombre": nombre,
+                  "email": email,
+                  "direccion": direccion,
+                  "telefono": telefono,
+                  "pass": password,
+                  "rol_id": 1
+                }),
+              };
+
+              $.ajax(settings).done(function (response) {
+                console.log(response);
+                alert(response.message);
+                location.reload();
+              });
+          }
 
   });
 
